@@ -1,0 +1,54 @@
+{
+  "name": "@materialr/form-field",
+  "version": "0.0.0-development",
+  "description": "Material form-field foundation implementation for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "build:production": "babel src --out-dir lib --ignore **/*.test.js,**/*.test.jsx",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "lint": "eslint --ext .js .",
+    "semantic-release": "semantic-release",
+    "test": "npm run lint && npm run test:vulnerabilities && npm run test:scripts",
+    "test:scripts": "jest --coverage",
+    "test:vulnerabilities": "nsp check",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/materialr/form-field.git"
+  },
+  "keywords": [
+    "React",
+    "Material",
+    "Formfield",
+    "Foundation"
+  ],
+  "author": "Hendrik Volschenk <righteous.trespasser@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/materialr/form-field/issues"
+  },
+  "homepage": "https://github.com/materialr/form-field#readme",
+  "dependencies": {
+    "@material/form-field": "^0.32.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.2",
+    "nsp": "^3.2.1",
+    "semantic-release": "^15.0.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ]
+  }
+}
