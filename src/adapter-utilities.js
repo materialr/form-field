@@ -1,8 +1,10 @@
 const PASSIVE_EVENT_LISTENERS = ['touchstart'];
 
 export default () => ({
-  activateInputRipple: activateElementInputRipple => () => activateElementInputRipple(),
-  deactivateInputRipple: deactivateElementInputRipple => () => deactivateElementInputRipple(),
+  activateInputRipple: activateElementInputRipple => () =>
+    activateElementInputRipple && activateElementInputRipple(),
+  deactivateInputRipple: deactivateElementInputRipple => () =>
+    deactivateElementInputRipple && deactivateElementInputRipple(),
   deregisterInteractionHandler: element =>
     (type, handler) => element.removeEventListener(type, handler),
   registerInteractionHandler: element => (type, handler) =>
