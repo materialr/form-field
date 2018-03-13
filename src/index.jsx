@@ -6,9 +6,9 @@ import '@material/form-field/mdc-form-field.scss';
 
 import formFieldFoundation from './foundation';
 
-const getClassNames = (alignLeft, className) => classnames({
+const getClassNames = (alignEnd, className) => classnames({
   'mdc-form-field': true,
-  'mdc-form-field--align-left': alignLeft,
+  'mdc-form-field--align-end': alignEnd,
   [className]: !!className,
 });
 
@@ -40,9 +40,9 @@ class FormField extends React.Component {
     this.formFieldFoundation = undefined;
   }
   render() {
-    const { alignLeft, children, className, htmlFor, label } = this.props;
+    const { alignEnd, children, className, htmlFor, label } = this.props;
     return (
-      <div className={getClassNames(alignLeft, className)}>
+      <div className={getClassNames(alignEnd, className)}>
         {children}
         <label
           className="mdc-form-field__label"
@@ -57,7 +57,7 @@ class FormField extends React.Component {
 }
 
 FormField.propTypes = {
-  alignLeft: PropTypes.bool,
+  alignEnd: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   htmlFor: PropTypes.string.isRequired,
@@ -67,7 +67,7 @@ FormField.propTypes = {
 };
 
 FormField.defaultProps = {
-  alignLeft: false,
+  alignEnd: false,
   children: undefined,
   className: undefined,
   rippleActivate: undefined,
