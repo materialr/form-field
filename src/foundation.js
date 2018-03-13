@@ -1,7 +1,5 @@
 import { MDCFormFieldFoundation } from '@material/form-field';
 
-import '@material/form-field/mdc-form-field.scss';
-
 import adapterUtilities from './adapter-utilities';
 
 export default ({
