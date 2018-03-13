@@ -22,10 +22,10 @@ test('<FormField /> > Renders only default classNames', () => {
 test('<FormField /> > Renders extra classNames based on props', () => {
   const CLASS_NAME = 'CLASS_NAME';
   const wrapper = shallow(
-    <FormField alignLeft className={CLASS_NAME} htmlFor={HTML_FOR} label={LABEL} />,
+    <FormField alignEnd className={CLASS_NAME} htmlFor={HTML_FOR} label={LABEL} />,
     { disableLifecycleMethods: true },
   );
-  const expected = `mdc-form-field mdc-form-field--align-left ${CLASS_NAME}`;
+  const expected = `mdc-form-field mdc-form-field--align-end ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 
