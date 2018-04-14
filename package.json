@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js .",
     "semantic-release": "semantic-release",
     "test": "npm run lint && npm run test:vulnerabilities && npm run test:scripts",
-    "test:scripts": "jest --coverage",
+    "test:scripts": "jest --coverage --config ./jest.config.json",
     "test:vulnerabilities": "nsp check"
   },
   "repository": {
