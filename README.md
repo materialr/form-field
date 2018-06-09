@@ -1,2 +1,3 @@
-# form-field
-Material form-field implementation for React
+# @materialr/form-field
+
+This package is not maintained and should not be used or trusted.
